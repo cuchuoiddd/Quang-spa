@@ -5,6 +5,17 @@ $(document).ready(function () {
     });
     $(".select2").select2();
     $(".select2-container .select2-selection__arrow b").remove();
+    // console.log($("#datepicker").length);
+    
+    if($("#datepicker").length){
+        $("#datepicker").datepicker({ 
+            autoclose: true, 
+            todayHighlight: true,
+            clearBtn: true
+        });
+    }
+    
+
     $(".show-more-menu").on("click", function () {
         const check = $(this).hasClass("icon-double-down");
         if (check) {
@@ -19,11 +30,13 @@ $(document).ready(function () {
         $(".customer-detail").hide();
     });
 
-    $(".select-custom__dropdown .item").on("click", function (e) {
-        $(".select-custom__dropdown .item").removeClass("active");
-        $(this).addClass("active");
-        $("#dropdownStatus").text($(this).text());
-    });
+    for(let i=1 ; i<= 12; i++) {
+        $(`.dropdown${i} .item`).on("click", function (e) {
+            $(`.dropdown${i} .item`).removeClass("active");
+            $(this).addClass("active");
+            $(`#dropdown${i}`).text($(this).text());
+        });
+    }
     $(".customer__info").on("click",function() {
         $(".customer-detail").show();
     });
@@ -40,6 +53,13 @@ $(document).ready(function () {
     $(".notification .close").on("click", function() {
         $(".notification").hide();
     });
+
+    $('.toast').toast({ 
+        animation: true, 
+        autohide:false,
+        delay: 2000 
+    }); 
+    $('.toast').toast('show'); 
 
 
 

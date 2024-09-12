@@ -59,9 +59,11 @@
 }
 .fs-14{
     font-size: 14px;
+    line-height: 14.7px;
 }
 .fs-18{
     font-size: 18px;
+    line-height: 18.19px;
 }
 .fs-24{
     font-size: 24px;
@@ -71,6 +73,12 @@
 }
 .fs-32{
     font-size: 32px;
+}
+.fw-600{
+    font-size: 600px !important;
+}
+.fw-700{
+    font-weight: 700px !important;
 }
 .pointer {
     cursor: pointer;
@@ -90,6 +98,12 @@
 .gap-24 {
     gap: 24px;
 }
+.p-12-16 {
+    padding: 12px 16px;
+}
+.p-12 {
+    padding: 12px;
+}
 .p-16 {
     padding: 16px;
 }
@@ -97,25 +111,31 @@
     padding: 24px;
 }
 .w-16 {
-    width: 16px;
+    width: 16px !important;
 }
 .w-40 {
-    width: 40px;
+    width: 40px !important;
 }
 .w-100 {
-    width: 100%;
+    width: 100% !important;
 }
 .w-232 {
-    width: 232px;
+    width: 232px !important;
 }
 .w-266 {
-    width: 266px;
+    width: 266px !important;
+}
+.w-314 {
+    width: 314px !important;
 }
 .h-16 {
     height: 16px;
 }
 .h-40 {
     height: 40px;
+}
+.h-253 {
+    height: 253px;
 }
 .mt-8 {
     margin-top: 8px;
@@ -141,6 +161,9 @@
 .pdl-2 {
     padding-right: 2px;
 }
+.max-width-700 {
+    max-width: 700px !important;
+}
 
 
 .select2 .selection{
@@ -158,6 +181,7 @@
     color: #fff;
     padding-left: 0;
     margin-left: -9px;
+    padding-right: 12px;
 }
 .select2 .select2-selection__arrow {
     background-image: url("images/Down.png");
@@ -170,7 +194,7 @@
 
 }
 .select2.select2-container {
-    width: unset !important;
+    /* width: unset !important; */
     min-width: 100px;
 }
 .select2-container .select2-search__field {
@@ -250,8 +274,51 @@
     line-height: 1;
 }
 
+.modal-custom {
+}
+.modal-custom .modal-header{
+    border-bottom: 1px solid #2E2E2E;
+    padding: 24px;
+}
+.modal-custom .modal-body{
+    padding: 24px;
+}
+.modal-custom .modal-content{
+    background: #131313;
+    border-radius: 24px;
 
+}
+.modal-custom .modal-content .modal-title-custom{
+    margin-bottom: 0;
+    line-height: 1.5;
+}
 
+.datepicker-custom {
+    position: relative;
+}
+.datepicker-custom input{
+    border-radius: 8px !important;
+    background: #2e2e2e !important;
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    font-size: 18px;
+    color: #999999;
+}
+.datepicker-custom .icon{
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+}
+input[type=text].default {
+    background: #2e2e2e;
+    padding: 12px 16px;
+    border-radius: 8px;
+    outline: none;
+    color: #999;
+    border: none;
+    width: 100%;
+}
 .w-400 {
     width: 400px;
 }

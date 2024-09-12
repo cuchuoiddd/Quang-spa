@@ -1,0 +1,22 @@
+.content__right {
+    border: none;
+    height: auto;
+}
+.content__right__header {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border: 1px solid #2E2E2E;
+}
+.content__right .content__right__body {
+    height: auto;
+}
+
+.modal-custom input[type=text] {
+    line-height: 18.9px;
+}
+.menu .active .active-border {
+    bottom: -6px;
+}
+.content__right .menu {
+    padding-bottom: 6px;
+}

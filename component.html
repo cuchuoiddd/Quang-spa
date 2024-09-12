@@ -10,8 +10,14 @@
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker3.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
     <link rel="stylesheet" href="component.css">
     <link rel="stylesheet" href="master.css">
+
+    
 
     <title>Document</title>
 </head>
@@ -65,6 +71,63 @@
         <div class="pointer mt-16">Hiển thị 100 kết quả/trang</div>
         <div class="pointer mt-16">Hiển thị 200 kết quả/trang</div>
     </div>
+
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Tạo mới
+    </button>
+    <div class="modal fade modal-custom" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog max-width-700">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title-custom font-sopher fs-24" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><img src="images/Close.png" alt=""></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-24 w-232">
+        <span style="color: var(--color-dark);">Trạng thái</span>
+        <div class="dropdown-custom dropdown-toggle select-custom mt-8" id="dropdownStatus" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Đang suy nghĩ</div>
+        <div class="dropdown-menu dropdown__status select-custom__dropdown w-232" aria-labelledby="dropdownStatus">
+            <div class="item pointer mt-16">Đang suy nghĩ</div>
+            <div class="item pointer mt-16 active">Hôm qua</div>
+            <div class="item pointer mt-16">Tuần trước</div>
+            <div class="item pointer mt-16">Tháng trước</div>
+            <div class="item pointer mt-16">Tuần trước</div>
+            <div class="item pointer mt-16">Tháng trước</div>
+            <div class="item pointer mt-16">Tuần trước</div>
+        </div>
+    </div>
+
+
+    <div id="datepicker" class="input-group date datepicker-custom w-266" 
+            data-date-format="mm-dd-yyyy">
+        <input type="text" class="w-100" placeholder="Ngon ngay" readonly />
+        <span class="input-group-addon">
+            <img src="images/Calendar.png" alt="" class="icon">
+        </span>
+    </div>
+    <div class="w-266">
+        <input type="text" class="default fs-18" placeholder="Nhập giờ">
+    </div>
+
+    <textarea placeholder="Nhập ghi chú ..." class="textarea-custom w-100 mt-8 h-253 fs-16"></textarea>
+
+
+
+
+    <div class="" style="margin-bottom: 40px;"></div>
 </body>
 <script src="https://getbootstrap.com/docs/4.6/assets/js/docs.min.js"></script>
 <script src="master.js"></script>
