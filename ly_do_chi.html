@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <link rel="stylesheet" href="component.css">
+    <link rel="stylesheet" href="master.css">
+    <title>Document</title>
+
+    <style>
+        .select2-custom .selection .select2-selection--single {
+            height: 48px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="header">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div class="logo pointer">
+                    <img src="./images/Logo.png" alt="">
+                </div>
+                <div class="center">
+                    <ul class="navbar-nav bd-navbar-nav flex-row">
+                        <li class="nav-item">
+                            <div class="gradient-btn">
+                                <img src="./images/Calendar1.png" alt="">
+                                <span class="fs-18 show-text">Lịch hẹn</span>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <div class="gradient-btn">
+                                <img src="./images/Customer.png" alt="">
+                                <span class="fs-18 show-text">Khách hàng</span>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="gradient-btn dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="dropdownMaketing" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="./images/Marketing.png" alt="">
+                                    <span class="fs-18 show-text text-white">Marketing</span>
+                                    <img class="down" src="./images/Down.png" alt="">
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMaketing">
+                                    <div class="dropdown-item dropdown-menu__header">Marketing</div>
+                                    <div class="dropdown-menu__border">
+                                        <div></div>
+                                    </div>
+
+                                    <a class="dropdown-item" href="#">Submenu 1</a>
+                                    <div class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">Submenu 2</a>
+                                        <img src="images/CaretRight.png" alt=""
+                                            style="position: absolute;top: 16px;right: 24px;">
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Submenu 2.1</a>
+                                            <a class="dropdown-item" href="#">Submenu 2.2</a>
+                                        </div>
+                                    </div>
+                                    <a class="dropdown-item" href="#">Submenu 3</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="gradient-btn dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="dropdownSell" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="./images/Sell.png" alt="">
+                                    <span class="fs-18 show-text text-white">Bán hàng</span>
+                                    <img class="down" src="./images/Down.png" alt="">
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownSell">
+                                    <div class="dropdown-item dropdown-menu__header">Bán hàng</div>
+                                    <div class="dropdown-menu__border">
+                                        <div></div>
+                                    </div>
+
+                                    <a class="dropdown-item" href="#">Submenu 1</a>
+                                    <div class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">Submenu 2</a>
+                                        <img src="images/CaretRight.png" alt=""
+                                            style="position: absolute;top: 16px;right: 24px;">
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Submenu 2.1</a>
+                                            <a class="dropdown-item" href="#">Submenu 2.2</a>
+                                        </div>
+                                    </div>
+                                    <a class="dropdown-item" href="#">Submenu 3</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="gradient-btn">
+                                <img src="./images/CS1.png" alt="">
+                                <span class="fs-18 show-text">CSKH</span>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <div class="gradient-btn">
+                                <img src="./images/Report.png" alt="">
+                                <span class="fs-18 show-text">Thống kê</span>
+                                <img class="down" src="./images/Down.png" alt="">
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="gradient-btn">
+                                <img src="./images/Storage.png" alt="">
+                                <span class="fs-18 show-text">Kho vận</span>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="gradient-btn">
+                                <img src="./images/Money2.png" alt="">
+                                <span class="fs-18 show-text">Duyệt chi</span>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="gradient-btn">
+                                <img src="./images/Employee.png" alt="">
+                                <span class="fs-18 show-text">Nhân sự</span>
+                                <img class="down" src="./images/Down.png" alt="">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="profile d-flex align-items-center">
+                    <div class="btn-group notice pointer">
+
+                        <img src="./images/Notii.png" class="dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">
+                                <div class="fs-24 font-sopher text-white">Thông báo</div>
+                                <div class="">
+                                    <img src="images/Checks.png" alt="">
+                                    <span class="color-info">Đánh dấu là đã đọc</span>
+                                </div>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <div class="left d-flex align-items-center gap-8" style="width: 77%;">
+                                    <img src="images/Ava.png" alt="" width="44" height="44">
+                                    <div class="">
+                                        <div class="color-white notice__title fs-16">Title thông báo Title thông báo
+                                            Title thông báo Title thông báo</div>
+                                        <div class="color-dark notice__content fs-14">Nội dung thông báo Nội dung thông
+                                            báo Nội dung thông báo Nội dung thông báo</div>
+                                    </div>
+                                </div>
+                                <div class="right text-right">
+                                    <div class="">
+                                        <img src="images/Ellipse.png" alt="">
+                                    </div>
+                                    <div class="color-dark">1 tiếng trước</div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <div class="left d-flex align-items-center gap-8" style="width: 77%;">
+                                    <img src="images/Ava.png" alt="" width="44" height="44">
+                                    <div class="">
+                                        <div class="color-white notice__title fs-16">Title thông báo</div>
+                                        <div class="color-dark notice__content fs-14">Nội dung thông báo</div>
+                                    </div>
+                                </div>
+                                <div class="right text-right d-flex align-items-end">
+                                    <div class="color-dark">1 tiếng trước</div>
+                                </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="dropdown">
+                        <a class="btn btn-secondary dropdown-toggle d-flex align-items-center" href="#" role="button"
+                            data-toggle="dropdown" aria-expanded="false">
+                            <div class="avatar">
+                                <img src="./images/Ava.png" alt="">
+                            </div>
+                            <div class="username text-white">
+                                <span class="fs-16">Vũ Văn Quang</span>
+                            </div>
+                            <img class="down" src="./images/Down.png" alt="">
+                        </a>
+
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="container" style="margin-bottom: 100px;">
+            <div class="d-flex align-items-center justify-content-between mt-16">
+                <div class="fs-32 font-sopher">Lý do chi</div>
+                <div class="d-flex gap-16">
+                    <select name="" class="select2" id="" style="width: 200px;" data-placeholder="Chọn danh mục">
+                        <option value=""></option>
+                        <option value="1">Nhóm dịnh vụ</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <button class="btn btn-primary">Tìm kiếm</button>
+                    <button class="btn btn-gradient btn-icon" type="button">
+                        <img src="./images/Plus.png" alt="">
+                        <span>Thêm dòng</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="content__right mt-16">
+                <div class="content__right__body" style="height: calc(100% - 90px);">
+                    <div class="position-relative">
+                        <table class="table table-striped table-bordered" style="max-height:700px;">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="text-center" style="height: 40px; width: 6%;">STT</th>
+                                    <th scope="col" class="text-center" style="height: 40px; width: 30%;">Tên nhóm</th>
+                                    <th scope="col" class="text-center" style="height: 40px; width: 30%;">Lý do</th>
+                                    <th scope="col" class="text-center" style="height: 40px; width: 24%;">Thao tác</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td class="text-center vertical-middle">1</td>
+                                    <td class="text-center vertical-middle">
+                                        <div class="select2-custom">
+                                            <select name="" class="select2 w-100" id="">
+                                                <option value="1">Nhóm dịnh vụ</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td class="text-center vertical-middle">
+                                        <input type="text" class="default fs-18" placeholder="Nhập filter">
+                                    </td>
+                                    <td class="text-center vertical-middle">
+                                        <div class="d-flex justify-content-center gap-16">
+                                            <img src="images/Printer.png" alt="" class="pointer">
+                                            <img src="images/Trash.png" alt="" class="pointer">
+                                        </div>
+                                    </td>
+                                </tr>
+                                
+                                
+            
+                                <!-- <tr>
+                                    <td colspan="20" class="no-data">
+                                        <img src="images/Nodata.png" alt="">
+                                    </td>
+                                </tr> -->
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="master.js"></script>
+</html>

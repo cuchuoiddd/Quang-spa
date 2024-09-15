@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-datepicker@1.9.0/dist/css/bootstrap-datepicker3.min.css">
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="component.css">
+    <link rel="stylesheet" href="master.css">
+    <link rel="stylesheet" href="css/client.css">
+    <title>Document</title>
+    <style>
+        .select2-custom .selection .select2-selection--single {
+            height: 48px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="header">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div class="logo pointer">
+                    <img src="./images/Logo.png" alt="">
+                </div>
+                <div class="center">
+                    <ul class="navbar-nav bd-navbar-nav flex-row">
+                        <li class="nav-item">
+                            <div class="gradient-btn">
+                                <img src="./images/Calendar1.png" alt="">
+                                <span class="fs-18 show-text">Lịch hẹn</span>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <div class="gradient-btn">
+                                <img src="./images/Customer.png" alt="">
+                                <span class="fs-18 show-text">Khách hàng</span>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="gradient-btn dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="dropdownMaketing" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="./images/Marketing.png" alt="">
+                                    <span class="fs-18 show-text text-white">Marketing</span>
+                                    <img class="down" src="./images/Down.png" alt="">
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMaketing">
+                                    <div class="dropdown-item dropdown-menu__header">Marketing</div>
+                                    <div class="dropdown-menu__border">
+                                        <div></div>
+                                    </div>
+
+                                    <a class="dropdown-item" href="#">Submenu 1</a>
+                                    <div class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">Submenu 2</a>
+                                        <img src="images/CaretRight.png" alt=""
+                                            style="position: absolute;top: 16px;right: 24px;">
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Submenu 2.1</a>
+                                            <a class="dropdown-item" href="#">Submenu 2.2</a>
+                                        </div>
+                                    </div>
+                                    <a class="dropdown-item" href="#">Submenu 3</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="gradient-btn dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="dropdownSell" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="./images/Sell.png" alt="">
+                                    <span class="fs-18 show-text text-white">Bán hàng</span>
+                                    <img class="down" src="./images/Down.png" alt="">
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownSell">
+                                    <div class="dropdown-item dropdown-menu__header">Bán hàng</div>
+                                    <div class="dropdown-menu__border">
+                                        <div></div>
+                                    </div>
+
+                                    <a class="dropdown-item" href="#">Submenu 1</a>
+                                    <div class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">Submenu 2</a>
+                                        <img src="images/CaretRight.png" alt=""
+                                            style="position: absolute;top: 16px;right: 24px;">
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Submenu 2.1</a>
+                                            <a class="dropdown-item" href="#">Submenu 2.2</a>
+                                        </div>
+                                    </div>
+                                    <a class="dropdown-item" href="#">Submenu 3</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="gradient-btn">
+                                <img src="./images/CS1.png" alt="">
+                                <span class="fs-18 show-text">CSKH</span>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <div class="gradient-btn">
+                                <img src="./images/Report.png" alt="">
+                                <span class="fs-18 show-text">Thống kê</span>
+                                <img class="down" src="./images/Down.png" alt="">
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="gradient-btn">
+                                <img src="./images/Storage.png" alt="">
+                                <span class="fs-18 show-text">Kho vận</span>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="gradient-btn">
+                                <img src="./images/Money2.png" alt="">
+                                <span class="fs-18 show-text">Duyệt chi</span>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="gradient-btn">
+                                <img src="./images/Employee.png" alt="">
+                                <span class="fs-18 show-text">Nhân sự</span>
+                                <img class="down" src="./images/Down.png" alt="">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="profile d-flex align-items-center">
+                    <div class="btn-group notice pointer">
+
+                        <img src="./images/Notii.png" class="dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">
+                                <div class="fs-24 font-sopher text-white">Thông báo</div>
+                                <div class="">
+                                    <img src="images/Checks.png" alt="">
+                                    <span class="color-info">Đánh dấu là đã đọc</span>
+                                </div>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <div class="left d-flex align-items-center gap-8" style="width: 77%;">
+                                    <img src="images/Ava.png" alt="" width="44" height="44">
+                                    <div class="">
+                                        <div class="color-white notice__title fs-16">Title thông báo Title thông báo
+                                            Title thông báo Title thông báo</div>
+                                        <div class="color-dark notice__content fs-14">Nội dung thông báo Nội dung thông
+                                            báo Nội dung thông báo Nội dung thông báo</div>
+                                    </div>
+                                </div>
+                                <div class="right text-right">
+                                    <div class="">
+                                        <img src="images/Ellipse.png" alt="">
+                                    </div>
+                                    <div class="color-dark">1 tiếng trước</div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <div class="left d-flex align-items-center gap-8" style="width: 77%;">
+                                    <img src="images/Ava.png" alt="" width="44" height="44">
+                                    <div class="">
+                                        <div class="color-white notice__title fs-16">Title thông báo</div>
+                                        <div class="color-dark notice__content fs-14">Nội dung thông báo</div>
+                                    </div>
+                                </div>
+                                <div class="right text-right d-flex align-items-end">
+                                    <div class="color-dark">1 tiếng trước</div>
+                                </div>
+                            </a>
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="dropdown">
+                        <a class="btn btn-secondary dropdown-toggle d-flex align-items-center" href="#" role="button"
+                            data-toggle="dropdown" aria-expanded="false">
+                            <div class="avatar">
+                                <img src="./images/Ava.png" alt="">
+                            </div>
+                            <div class="username text-white">
+                                <span class="fs-16">Vũ Văn Quang</span>
+                            </div>
+                            <img class="down" src="./images/Down.png" alt="">
+                        </a>
+
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="pointer mt-16">
+                <img src="images/Back.png" alt=""> <span>Quay lại</span>
+            </div>
+            <div class="mt-16">
+                <span class="fs-24 font-sopher">Tạo mới khách hàng</span>
+            </div>
+
+            <div class="d-flex gap-24 mt-24">
+                <div class="w-50p">
+                    <span class="color-dark fs-16">Tên khách hàng</span>
+                    <div class="mt-8">
+                        <input type="text" class="default fs-18 color-white" placeholder="Nhập tên khách hàng">
+                    </div>
+                </div>
+                <div class="w-50p position-relative">
+                    <span class="color-dark fs-16">Người phụ trách</span>
+                    <div class="select2-custom mt-8">
+                        <select name="" class="select2 w-100 h-40" id="" data-placeholder="Chọn nhân viên">
+                            <option value=""></option>
+                            <option value="1">Nhóm dịnh vụ</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex gap-24 mt-24">
+                <div class="w-50p">
+                    <span class="color-dark fs-16">Số điện thoại</span>
+                    <div class="mt-8">
+                        <input type="text" class="default fs-18 color-white" placeholder="0988 123 456">
+                    </div>
+                </div>
+                <div class="w-50p position-relative">
+                    <span class="color-dark fs-16">MKT phụ trách</span>
+                    <div class="select2-custom mt-8">
+                        <select name="" class="select2 w-100 h-40" id="" data-placeholder="Chọn nhân viên">
+                            <option value=""></option>
+                            <option value="1">Nhóm dịnh vụ</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex gap-24 mt-24">
+                <div class="w-50p">
+                    <span class="color-dark fs-16">Thần số học</span>
+                    <div class="mt-8">
+                        <input type="text" class="default fs-18 color-white" placeholder="Nhập thông tin">
+                    </div>
+                </div>
+                <div class="w-50p position-relative">
+                    <span class="color-dark fs-16">Trạng thái</span>
+                    <div class="dropdown-custom dropdown-toggle select-custom mt-8 fs-18 color-white" id="dropdown1"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Khách hàng
+                    </div>
+                    <div class="dropdown-menu dropdown__status select-custom__dropdown dropdown1 w-100"
+                        aria-labelledby="dropdown1">
+                        <div class="item pointer mt-16">Dịch vụ</div>
+                        <div class="item pointer mt-16 active">Hôm qua</div>
+                        <div class="item pointer mt-16">Tuần trước</div>
+                        <div class="item pointer mt-16">Tháng trước</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="d-flex gap-24 mt-24">
+                <div class="w-50p">
+                    <span class="color-dark fs-16">Từ huyệt</span>
+                    <div class="mt-8">
+                        <input type="text" class="default fs-18 color-white" placeholder="Nhập thông tin">
+                    </div>
+                </div>
+                <div class="w-50p position-relative">
+                    <span class="color-dark fs-16">Nguồn khách hàng</span>
+                    <div class="dropdown-custom dropdown-toggle select-custom mt-8 fs-18 color-white" id="dropdown2"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Nguồn khách hàng
+                    </div>
+                    <div class="dropdown-menu dropdown__status select-custom__dropdown dropdown2 w-100"
+                        aria-labelledby="dropdown2">
+                        <div class="item pointer mt-16">Dịch vụ</div>
+                        <div class="item pointer mt-16 active">Hôm qua</div>
+                        <div class="item pointer mt-16">Tuần trước</div>
+                        <div class="item pointer mt-16">Tháng trước</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="d-flex gap-24 mt-24">
+                <div class="w-50p">
+                    <span class="color-dark fs-16">Nghề nghiệp</span>
+                    <div class="mt-8">
+                        <input type="text" class="default fs-18 color-white" placeholder="Nhập thông tin">
+                    </div>
+                </div>
+                <div class="w-50p position-relative">
+                    <span class="color-dark fs-16">Nhóm khách hàng</span>
+                    <div class="dropdown-custom dropdown-toggle select-custom mt-8 fs-18 color-dark" id="dropdown3"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Chọn nhóm khách hàng
+                    </div>
+                    <div class="dropdown-menu dropdown__status select-custom__dropdown dropdown3 w-100"
+                        aria-labelledby="dropdown3">
+                        <div class="item pointer mt-16">Dịch vụ</div>
+                        <div class="item pointer mt-16 active">Hôm qua</div>
+                        <div class="item pointer mt-16">Tuần trước</div>
+                        <div class="item pointer mt-16">Tháng trước</div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <div class="d-flex gap-24 mt-24">
+                <div class="w-50p position-relative">
+                    <span class="color-dark fs-16">Ngày sinh</span>
+                    <div class="dropdown-custom dropdown-toggle select-custom mt-8 fs-18 color-dark" id="dropdown6"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Chọn ngày sinh
+                    </div>
+                    <div class="dropdown-menu dropdown__status select-custom__dropdown dropdown6 w-100"
+                        aria-labelledby="dropdown6">
+                        <div class="item pointer mt-16">Dịch vụ</div>
+                        <div class="item pointer mt-16 active">Hôm qua</div>
+                        <div class="item pointer mt-16">Tuần trước</div>
+                        <div class="item pointer mt-16">Tháng trước</div>
+                    </div>
+                </div>
+                <div class="w-50p position-relative">
+                    <span class="color-dark fs-16">Nhóm dịch vụ khai thác thêm</span>
+                    <div class="dropdown-custom dropdown-toggle select-custom mt-8 fs-18 color-dark" id="dropdown7"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Chọn nhân viên
+                    </div>
+                    <div class="dropdown-menu dropdown__status select-custom__dropdown dropdown7 w-100"
+                        aria-labelledby="dropdown7">
+                        <div class="item pointer mt-16">Dịch vụ</div>
+                        <div class="item pointer mt-16 active">Hôm qua</div>
+                        <div class="item pointer mt-16">Tuần trước</div>
+                        <div class="item pointer mt-16">Tháng trước</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="d-flex gap-24 mt-24">
+                <div class="w-50p">
+                    <span class="color-dark fs-16">Địa chỉ</span>
+                    <div class="mt-8">
+                        <input type="text" class="default fs-18 color-white" placeholder="Nhập địa chỉ">
+                    </div>
+                </div>
+                <div class="w-50p position-relative">
+                    <span class="color-dark fs-16">Nhóm tính cách</span>
+                    <div class="dropdown-custom dropdown-toggle select-custom mt-8 fs-18 color-dark" id="dropdown8"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Chọn nhóm tính cách
+                    </div>
+                    <div class="dropdown-menu dropdown__status select-custom__dropdown dropdown8 w-100"
+                        aria-labelledby="dropdown8">
+                        <div class="item pointer mt-16">Dịch vụ</div>
+                        <div class="item pointer mt-16 active">Hôm qua</div>
+                        <div class="item pointer mt-16">Tuần trước</div>
+                        <div class="item pointer mt-16">Tháng trước</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="d-flex gap-24 mt-24">
+                <div class="w-50p">
+                    <span class="color-dark fs-16">Facebook</span>
+                    <div class="mt-8">
+                        <input type="text" class="default fs-18 color-white" placeholder="Nhập thông tin">
+                    </div>
+                </div>
+                <div class="w-50p position-relative">
+                    <span class="color-dark fs-16">Mệnh</span>
+                    <div class="dropdown-custom dropdown-toggle select-custom mt-8 fs-18 color-dark" id="dropdown9"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Chọn mệnh
+                    </div>
+                    <div class="dropdown-menu dropdown__status select-custom__dropdown dropdown9 w-100"
+                        aria-labelledby="dropdown9">
+                        <div class="item pointer mt-16">Dịch vụ</div>
+                        <div class="item pointer mt-16 active">Hôm qua</div>
+                        <div class="item pointer mt-16">Tuần trước</div>
+                        <div class="item pointer mt-16">Tháng trước</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="d-flex gap-24 mt-24">
+                <div class="w-50p">
+                    <span class="color-dark fs-16">Mô tả</span>
+                    <div class="mt-8">
+                        <input type="text" class="default fs-18 color-white" placeholder="Nhập thông tin">
+                    </div>
+                </div>
+                <div class="w-50p position-relative">
+                    <span class="color-dark fs-16">Sở thích</span>
+                    <div class="mt-8">
+                        <input type="text" class="default fs-18 color-white" placeholder="Nhập thông tin">
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex gap-24 mt-24">
+                <div class="w-50p position-relative">
+                    <span class="color-dark fs-16">Giới tính</span>
+                    <div class="dropdown-custom dropdown-toggle select-custom mt-8 fs-18 color-dark" id="dropdown10"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Chọn giới tính
+                    </div>
+                    <div class="dropdown-menu dropdown__status select-custom__dropdown dropdown10 w-100"
+                        aria-labelledby="dropdown10">
+                        <div class="item pointer mt-16">Dịch vụ</div>
+                        <div class="item pointer mt-16 active">Hôm qua</div>
+                        <div class="item pointer mt-16">Tuần trước</div>
+                        <div class="item pointer mt-16">Tháng trước</div>
+                    </div>
+
+                </div>
+                <div class="w-50p position-relative">
+                    <span class="color-dark fs-16">Tính cách khách hàng</span>
+                    <div class="mt-8">
+                        <input type="text" class="default fs-18 color-white" placeholder="Nhập thông tin">
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex gap-24 mt-24">
+                <div class="w-50p position-relative">
+                    <span class="color-dark fs-16">Chi nhánh</span>
+                    <div class="dropdown-custom dropdown-toggle select-custom mt-8 fs-18 color-dark" id="dropdown11"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Chọn chi nhánh
+                    </div>
+                    <div class="dropdown-menu dropdown__status select-custom__dropdown dropdown11 w-100"
+                        aria-labelledby="dropdown11">
+                        <div class="item pointer mt-16">Dịch vụ</div>
+                        <div class="item pointer mt-16 active">Hôm qua</div>
+                        <div class="item pointer mt-16">Tuần trước</div>
+                        <div class="item pointer mt-16">Tháng trước</div>
+                    </div>
+
+                </div>
+                <div class="w-50p position-relative">
+                    <span class="color-dark fs-16">Ảnh đại diện</span>
+                    <div class="mt-8">
+                        <input type="file" class="default fs-18 color-white file" placeholder="Nhập thông tin"
+                            style="display: none;" id="imgInp">
+                        <div class="d-flex align-items-center justify-content-center pointer upload-file gap-8 p-12 h-48"
+                            style="border: 1px dashed #999999;border-radius: 8px;">
+                            <img src="images/Album.png" alt="">
+                            <span>Chọn ảnh</span>
+                        </div>
+
+                        <img id="blah" src="#" class="d-none" width="42" height="42" style="position: absolute; top: 31px; left: 10px;"/>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="mt-24" style="border: 1px solid #686777"></div>
+            <div class="mt-24" style="margin-bottom: 47px;">
+                <div class="d-flex gap-8">
+                    <button class="btn btn-gradient btn-lg font-svn-medium" type="button">
+                        <span>Huỷ</span>
+                    </button>
+                    <button class="btn btn-primary btn-lg font-svn-medium" type="button">
+                        <span>Lưu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="master.js"></script>
+<script>
+    $(document).on("click", ".upload-file", function () {
+        $(".file").click();
+    });
+
+    imgInp.onchange = evt => {
+        const [file] = imgInp.files
+        if (file) {
+            blah.src = URL.createObjectURL(file);
+            $("#blah").removeClass("d-none");
+        }
+    }
+</script>
+
+</html>

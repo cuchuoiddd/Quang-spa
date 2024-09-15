@@ -30,13 +30,22 @@ $(document).ready(function () {
         $(".customer-detail").hide();
     });
 
+    //click item select custom
     for(let i=1 ; i<= 12; i++) {
+        $(`#dropdown${i}`).append( `<img src="images/Down.png">`);
+        $(`.dropdown${i} .item.active`).prepend( `<img src="images/Check_active.png">`);
         $(`.dropdown${i} .item`).on("click", function (e) {
             $(`.dropdown${i} .item`).removeClass("active");
+            $(`.dropdown${i} .item img`).remove();
             $(this).addClass("active");
-            $(`#dropdown${i}`).text($(this).text());
+            $(this).prepend( `<img src="images/Check_active.png">`);
+            $(`#dropdown${i}`).text($(this).text()).append( `<img src="images/Down.png">`);
         });
     }
+
+
+
+
     $(".customer__info").on("click",function() {
         $(".customer-detail").show();
     });

@@ -56,6 +56,9 @@ body {
 .bg-main {
     background-color: var(--bg-main);
 }
+.bg-gradient {
+    background: radial-gradient(120.26% 166.07% at -4.23% -32.74%, #1A2749 0%, #253763 36.39%, #121B34 75.39%, #0C1124 100%);
+}
 .color-main {
     color: var(--bg-main) !important;
 }
@@ -84,7 +87,7 @@ body {
 }
 
 .color-white {
-    color: #fff;
+    color: #fff !important;
 }
 
 body {
@@ -425,21 +428,18 @@ body {
 }
 
 .select-custom {
+    display: flex;
+    justify-content: space-between;
     background: #2E2E2E;
     color: #fff;
     height: 48px;
     padding: 13.5px 16px;
     outline: none;
     border-radius: 8px;
-    -moz-appearance: none;
-    /* Firefox */
-    -webkit-appearance: none;
-    /* Safari and Chrome */
-    appearance: none;
-    background-image: url("images/Down.png");
-    background-repeat: no-repeat;
-    background-position-x: 98%;
-    background-position-y: 12px;
+}
+.select-custom.select-custom-outline {
+    background: #131313;
+    border: 1px solid #686777;
 }
 
 .textarea-custom {
@@ -453,7 +453,7 @@ body {
 .detail__pagination {
     width: 220px;
     top: 10px !important;
-    left: -33px !important;
+    left: -137px !important;
     background: radial-gradient(120.26% 166.07% at -4.23% -32.74%, #1A2749 0%, #253763 36.39%, #121B34 75.39%, #0C1124 100%) padding-box,
         linear-gradient(130.35deg, #FAF9F7 -2.76%, #2AABE2 53.97%) border-box;
 
@@ -498,13 +498,16 @@ body {
 .select-custom__dropdown div.item {
     padding-left: 40px;
 }
+.select-custom__dropdown div.item:last-child {
+    margin-bottom: 9px;
+}
 
 .select-custom__dropdown div.active {
-    background-image: url("images/Check_active.png");
     color: var(--color-info);
-    background-repeat: no-repeat;
-    background-position-x: 3%;
-    background-position-y: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-left: 16px;
 }
 
 .dropdown-submenu {
@@ -612,7 +615,7 @@ body {
     background: #686777;
 }
 .content__table td {
-    padding: 8.5px 12px !important;
+    padding: 8.5px 12px;
     line-height: 14.7px;
 }
 
