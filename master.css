@@ -133,6 +133,9 @@ body {
 
 .active .gradient-btn .show-text {
     display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: auto !important;
 }
 
 .active .gradient-btn,
@@ -145,6 +148,34 @@ body {
     border-radius: 60px;
     display: inline-block;
 }
+
+
+
+
+.gradient-btn {
+    transition: all calc(400* 1ms) cubic-bezier(.42, .01, .58, 1);
+}
+
+.header .navbar-nav .nav-item .show-text {
+    display: inline-block;
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    vertical-align: middle;
+    transition: all calc(500* 1ms) cubic-bezier(.42, .01, .58, 1);
+    white-space: nowrap;
+    /* overflow: hidden; */
+}
+
+.nav-item .gradient-btn:hover .show-text {
+    opacity: 1;
+    visibility: visible;
+    width: auto;
+}
+
+
+
+
 
 
 
@@ -372,6 +403,24 @@ body {
     line-height: 14.7px;
 }
 .content__table thead th input[type="checkbox"]{
+    position: absolute;
+    top: 12px;
+    left: 16px;
+}
+
+.content__table1 {
+    width: 100%;
+    max-height: 750px;
+    position: relative;
+    overflow: auto;
+}
+.content__table1 th{
+    font-weight: 500;
+    height: 39px;
+    position: sticky;
+    top: -1px;
+}
+.content__table1 thead th input[type="checkbox"]{
     position: absolute;
     top: 12px;
     left: 16px;

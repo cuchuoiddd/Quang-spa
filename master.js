@@ -11,7 +11,8 @@ $(document).ready(function () {
         $("#datepicker").datepicker({ 
             autoclose: true, 
             todayHighlight: true,
-            clearBtn: true
+            clearBtn: true,
+            format: 'mm-yyyy'
         });
     }
     
