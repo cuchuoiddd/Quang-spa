@@ -343,7 +343,12 @@
             <table class="table table-striped table-responsive table-bordered" style="width: 4000px;max-height:700px;">
                 <thead>
                     <tr>
-                        <th scope="col" class="text-center" style="width: 50px;"><input type="checkbox" class="vertical-middle"></th>
+                        <th scope="col" class="text-center" style="width: 50px;">
+                            <label class="container__checkbox">
+                                <input type="checkbox" class="checkAll">
+                                <span class="checkmark" style="margin-left: 4px;top:-3px;"></span>
+                            </label>
+                        </th>
                         <th scope="col" class="text-center">STT</th>
                         <th scope="col" class="w-400 text-center">Ngày tạo KH</th>
                         <th scope="col" class="w-400 text-center">Họ tên</th>
@@ -358,7 +363,11 @@
                 <tbody>
                     <tr>
                         <td class="text-center vertical-middle">
-                            <input type="checkbox">
+                            <!-- <input type="checkbox"> -->
+                            <label class="container__checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark" style="margin-left: 4px;"></span>
+                            </label>
                         </td>
                         <td class="text-center vertical-middle">1</td>
                         <td>
@@ -527,4 +536,10 @@
     
 </body>
 <script src="master.js"></script>
+<script>
+    $(".checkAll").on("click",function(e) {
+        console.log(123,$(this).is(":checked"));
+
+    });
+</script>
 </html>

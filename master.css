@@ -36,6 +36,8 @@ body {
     --color-warning: #FFC544;
     --color-orange: #FF6B00;
     --color-green: #3FD599;
+    --color-danger: #FF0060;
+    --color-yellow: #FDDE55;
     --bg-main: #131313;
 }
 .font-sopher {
@@ -88,6 +90,12 @@ body {
 
 .color-white {
     color: #fff !important;
+}
+.color-yellow {
+    color: var(--color-yellow) !important;
+}
+.color-danger {
+    color: var(--color-danger);
 }
 
 body {
