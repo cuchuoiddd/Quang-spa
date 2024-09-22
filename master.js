@@ -29,6 +29,7 @@ $(document).ready(function () {
     });
     $(".detail .close").on("click", function () {
         $(".customer-detail").hide();
+        $(".modal-backdrop").remove();
     });
 
     //click item select custom
@@ -49,17 +50,21 @@ $(document).ready(function () {
 
     $(".customer__info").on("click",function() {
         $(".customer-detail").show();
+        $("body").append(`<div class="modal-backdrop fade show"></div>`)
     });
 
 
     let elm = $(".content__table thead th");
-    let totalWidth = 0;
-    elm.each(function( index ) {
-        totalWidth += elm[index].offsetWidth;
-    });
-    if(totalWidth > 0) {
-        $(".content__table table").css("width",totalWidth);
+    if(elm) {
+        let totalWidth = 0;
+        elm.each(function( index ) {
+            totalWidth += elm[index].offsetWidth;
+        });
+        if(totalWidth > 0) {
+            $(".content__table table").css("width",totalWidth);
+        }
     }
+    
     $(".notification .close").on("click", function() {
         $(".notification").hide();
     });

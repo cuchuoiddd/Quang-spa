@@ -220,6 +220,10 @@
     height: 253px;
 }
 
+.mt-6 {
+    margin-top: 6px;
+}
+
 .mt-8 {
     margin-top: 8px;
 }
@@ -311,6 +315,10 @@
 .select2-custom .selection .select2-selection--single {
     background: #2E2E2E;
     border: none;
+}
+
+.select2-custom.h-48 .selection .select2-selection--single {
+    height: 48px;
 }
 
 
