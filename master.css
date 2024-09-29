@@ -484,6 +484,24 @@ body {
     color: var(--bg-main);
     font-weight: 700;
 }
+.customer-detail .note__item {
+    border-bottom: 1px solid #2E2E2E;
+    padding-bottom: 16px;
+    margin-top: 16px;
+}
+.customer-detail .note__item:first-child {
+    margin-top: 0;
+}
+.customer-detail .note__item:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+.customer-detail .list-note {
+    background: #1B1B1B;
+    border-radius: 8px;
+    max-height: 400px;
+    overflow: auto;
+}
 
 .select-custom {
     display: flex;
